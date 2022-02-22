@@ -13,11 +13,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Analyze {
-    public static void main(String[] args) throws IOException {
-        String filePath = "src/main/resources/text.jpg";
+    public List <String> search(String path) throws IOException {
+
+//        String file = "src/main/resources/text.jpg";
+//        String file = path;
 
         // Load the file
-        ByteString imageBytes = ByteString.readFrom(new FileInputStream(filePath));
+        ByteString imageBytes = ByteString.readFrom(new FileInputStream(path));
         Image image = Image.newBuilder().setContent(imageBytes).build();
 
         // Create a label detection request for the image
@@ -39,10 +41,15 @@ public class Analyze {
         }
 
         // Print the labels extracted from the image
+        List <String> info=new ArrayList<>();
         for (EntityAnnotation annotation : imageResponse.getLabelAnnotationsList()) {
             System.out.println(annotation.getDescription());
+            info.add(annotation.getDescription()+ ": " + (annotation.getScore()*100)+" %");
         }
-
         client.close();
+//        return (String[]) imageResponse.getLabelAnnotationsList().toArray();
+        return info;
+
+//        return ["ds"];
     }
 }
