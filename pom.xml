@@ -41,6 +41,11 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>LATEST</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>google-cloud-translate</artifactId>
+            <version>LATEST</version>
+        </dependency>
     </dependencies>
 
 

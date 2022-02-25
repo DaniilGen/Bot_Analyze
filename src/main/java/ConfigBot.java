@@ -1,8 +1,6 @@
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.GetFile;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
-import org.telegram.telegrambots.meta.api.objects.Document;
 import org.telegram.telegrambots.meta.api.objects.PhotoSize;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
@@ -58,15 +56,6 @@ public class ConfigBot extends TelegramLongPollingBot {
                         e.printStackTrace();
                     }
                 }
-
-//            SendMessage message = new SendMessage();
-//            message.setChatId(String.valueOf(chat_id));
-//            message.setText(message_text);
-//            try {
-//                execute(message);
-//            } catch (TelegramApiException e) {
-//                e.printStackTrace();
-//            }
             System.out.println();
             System.out.println(message_text);
             System.out.println();
@@ -100,43 +89,12 @@ public class ConfigBot extends TelegramLongPollingBot {
             }
             SendMessage message = new SendMessage();
             message.setChatId(String.valueOf(chat_id));
-//            message.setText("Я думаю что это... \n"+descr.get(0)+"\n"+descr.get(1));
-            message.setText("Я думаю что это... \n"+ans);
+            message.setText("❗️Я думаю что это \uD83E\uDD14 \n \n"+ans);
             try {
                 execute(message);
             } catch (TelegramApiException e) {
                 e.printStackTrace();
             }
-//            long chat_id = update.getMessage().getChatId();
-//            List<PhotoSize> photos = update.getMessage().getPhoto();
-//            String f_id = photos.stream()
-//                    .sorted(Comparator.comparing(PhotoSize::getFileSize).reversed())
-//                    .findFirst()
-//                    .orElse(null).getFileId();
-//
-//            SendPhoto photo= new SendPhoto();
-//            photo.getPhoto(f_id);
-//            update.
-//            System.out.println();
-//            System.out.println(f_id);
-//            System.out.println();
-//            String f_id = photos.stream()
-//                    .sorted(Comparator.comparing(PhotoSize::getFileSize).reversed())
-//                    .findFirst()
-//                    .orElse(null).getFileId();
-//
-//            SendPhoto msg = new SendPhoto();
-//                    msg.setChatId(String.valueOf(chat_id));
-//                    msg.setPhoto(f_id);
-//            try {
-//                execute(msg); // Call method to send the photo with caption
-//            } catch (TelegramApiException e) {
-//                e.printStackTrace();
-//            }
         }
     }
-
-//        String message = update.getMessage().getText();
-//        sendMsg(update.getMessage().getChatId().toString(), message);
-//}
 }
