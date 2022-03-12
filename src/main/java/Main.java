@@ -1,6 +1,5 @@
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
-//import org.telegram.telegrambots.ApiContextInitializer;
 import org.apache.log4j.BasicConfigurator;
 
 public class Main {
