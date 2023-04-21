@@ -137,33 +137,5 @@ public class SQL {
         }
         return info;
     }
-    /*
-    public static void main(String[] args) throws SQLException, IOException {
-        String connectionUrl = "jdbc:sqlite:C:\\Users\\Даниил\\Documents\\Data_Bases\\Telegram_Bot.db";
-        System.out.print("Connecting to SQL Server ... ");
-        Connection connection = DriverManager.getConnection(connectionUrl);
-        connection.setAutoCommit(false);
-        System.out.println("ok");
-        Statement request = connection.createStatement();
-        checkUser(12, 12);
-        readPicture(2, "C:\\Users\\Даниил\\IdeaProjects\\Bot_Analyze\\src\\main\\resources\\BLOB.jpg");
-        insertPicture(4,"C:\\Users\\Даниил\\IdeaProjects\\Bot_Analyze\\src\\main\\resources\\recentAgACAgIAAxkBAAIB-GIVNhZREr91L4AVPT3v67Z65GPyAAIRuTEbAzOxSBodF0hyzFlEAQADAgADeQADIwQ.jpg","'ok3333'","'32.01.2001'");
-            String SQL="INSERT INTO Main_Info (telegram_id,chat_id) " +
-                "VALUES (1,2);";
-        String connectionUrl = "jdbc:sqlserver://DESKTOP-JFHMD7V\\SQL2019;database=Group;" +
-                "trustServerCertificate=true;+" +
-                "integratedSecurity=true;" +
-                "encrypt=true; trustServerCertificate=false;"+
-                "trustStore= C:\\Program Files\\Java\\jdk-16.0.1\\lib\\security\\cacerts; trustStorePassword=changeit;";
-        String username = "sa";
-        String password = "Abcde_1234";
-        try {
-        Connection connection = DriverManager.getConnection(connectionUrl, username, password);
-        }
-        catch (Exception e) {
-            System.out.println();
-            e.printStackTrace();
-        }
-    }
-     */
+
 }
